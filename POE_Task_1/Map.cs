@@ -27,7 +27,7 @@ namespace POE_Task_1
             UnitNum = UnitN;
         }
 
-        public  void GenerateBattleField()
+        public  void GenerateBattleField() // placing the units down and setting all the units stats
         {
             for (int i = 0; i < UnitNum; i++)
             {
@@ -100,7 +100,7 @@ namespace POE_Task_1
             Populate();
         }
 
-        public void Populate()
+        public void Populate() //filling the block map with units
         {
             for (int i = 0; i < 20; i++)
             {

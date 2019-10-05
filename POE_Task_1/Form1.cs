@@ -32,7 +32,7 @@ namespace POE_Task_1
             PlaceButtons();
         }
 
-        public void PlaceButtons() //method to place the buttons that much up the battle field fpr the uinits
+        public void PlaceButtons() //method to place the buttons that much up the battle field for the units and choosing the colour and symbol in this method
         {
             GbBoxMap.Controls.Clear();
 

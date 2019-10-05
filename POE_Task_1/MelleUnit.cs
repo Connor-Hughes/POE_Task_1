@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POE_Task_1
 {
@@ -75,7 +71,7 @@ namespace POE_Task_1
 
         }
 
-        public override void Move()
+        public override void Move() //showing the units which other units to attack and at what point to try run away
         {
             if (ClosestUnit.posX > posX && posX < 20)
             {
@@ -97,7 +93,7 @@ namespace POE_Task_1
           
         }
 
-        public override void Combat()
+        public override void Combat() //telling the units to  attack the closest enemy
         {
 
             foreach (Units u in units)
@@ -112,7 +108,7 @@ namespace POE_Task_1
             }
         }
 
-        public override void AttRange(List<Units> uni, Units[,] uniMap)
+        public override void AttRange(List<Units> uni, Units[,] uniMap) // telling the units to  attack the closest enemy
         {
             units = uni;
 
@@ -135,7 +131,7 @@ namespace POE_Task_1
             }
         }
 
-        public override bool Death()
+        public override bool Death() // telling the units to die once health has reached 0
         {
             return true;
         }
