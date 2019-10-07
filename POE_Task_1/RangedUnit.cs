@@ -9,7 +9,7 @@ namespace POE_Task_1
 {
     class RangedUnit : Units
     {
-        public int PosX
+        public int PosX // all the properties needed for the units
         {
             get { return posX; }
             set { base.posX = value; }
@@ -70,14 +70,14 @@ namespace POE_Task_1
         Random r = new Random();
         private Units ClosestUnit;
 
-        public RangedUnit(int x, int y, int hp, int spd, int atk, int attRange, faction fac, string sym, bool iatk)
+        public RangedUnit(int x, int y, int hp, int spd, int atk, int attRange, faction fac, string sym, bool iatk) // constructor for all the parameters
             : base(x, y, hp, spd, atk, attRange, fac, sym, iatk)
         {
 
         }
 
 
-        public override void Move()
+        public override void Move() //telling the unit which enemy unit to move towards(cloesest enemy on the battlefield)
         {
             if (ClosestUnit.posX > posX && posX < 20)
             {
@@ -99,9 +99,8 @@ namespace POE_Task_1
 
         }
 
-        public override void Combat()
+        public override void Combat() //telling the units to attack the closest enemy
         {
-
             foreach (Units u in units)
             {
                 if (ClosestUnit.posX == u.posX && ClosestUnit.posY == u.posY)
@@ -114,7 +113,7 @@ namespace POE_Task_1
             }
         }
 
-        public override void AttRange(List<Units> uni, Units[,] uniMap)
+        public override void AttRange(List<Units> uni, Units[,] uniMap) //method used to tell the unit whether to attack a unit ot to run away because of low health
         {
             units = uni;
 

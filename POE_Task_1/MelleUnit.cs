@@ -5,7 +5,7 @@ namespace POE_Task_1
 {
     class MelleUnit : Units
     {
-        public int PosX
+        public int PosX  // all the properties needed for the units
         {
             get { return posX; }
             set { base.posX = value; }

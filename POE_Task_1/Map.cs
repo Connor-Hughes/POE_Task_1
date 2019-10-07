@@ -35,7 +35,6 @@ namespace POE_Task_1
                 {
                     RangedUnit Musketeer = new RangedUnit(0, 0, 40, 1, 5, 3, faction.Hero, "->", false);
                     rangedUnit.Add(Musketeer);
-                    Debug.Print("Make ranged");
                 }
                 else
                 {
@@ -125,12 +124,11 @@ namespace POE_Task_1
 
             foreach (Units u in rangedUnit)
             {
-                Debug.Print("Place Ranged");
-                map[u.posY, u.posX] = "R";
+                map[u.posY, u.posX] = "R"; // symbol for ranged units
             }
             foreach (Units u in melleUnit)
             {
-                map[u.posY, u.posX] = "M";
+                map[u.posY, u.posX] = "M"; // symbol for melee units
             }
 
 

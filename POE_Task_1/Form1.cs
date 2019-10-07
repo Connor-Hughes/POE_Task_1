@@ -57,11 +57,11 @@ namespace POE_Task_1
 
                         if (m.uniMap[i, j].factionType == faction.Hero)
                         {
-                            btn.BackColor = Color.Chartreuse;
+                            btn.BackColor = Color.Chartreuse; // color for the Ranged unit
                         }
                         else
                         {
-                            btn.BackColor = Color.Crimson;
+                            btn.BackColor = Color.Crimson; // color for the melee unit
                         }
                     }
                     else if (m.map[i, j] == "M")
@@ -111,12 +111,12 @@ namespace POE_Task_1
             }
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e) // enabling the ticker for each round when start button is pressed
         {
             Ticker.Enabled = true;
         }
 
-        private void btnPause_Click(object sender, EventArgs e)
+        private void btnPause_Click(object sender, EventArgs e) // disabling the ticker when the pause button is pressed
         {
             Ticker.Enabled = false;
         }
@@ -124,10 +124,10 @@ namespace POE_Task_1
         private void Ticker_Tick(object sender, EventArgs e)
         {
             GameEngine();
-            lblRound.Text = "Round: " + Round;
+            lblRound.Text = "Round: " + Round;  // showing the user what round they are on
         }
 
-        public void GameEngine()
+        public void GameEngine() // game engine in the form for ease of use
         {
             foreach (Units u in m.units)
             {
